@@ -12,7 +12,7 @@ In this repository, for Phantm you will find:
 
  :white_check_mark: Source code for Phantm
  
- :x: Original Buglocalizer plugin 
+ :x: Original Phantm JAR file 
  
 This repository was constructed by Nikhil Josyabhatla of Team New Hanover under the supervision of Dr. Emerson Murphy-Hill.
 
