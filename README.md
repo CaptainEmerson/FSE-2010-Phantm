@@ -1,3 +1,23 @@
+# FSE-2010-Phantm
+
+This repository contains the information related to the tool Phantm. Phantm is a tool developed by Etienne Kneuss, Philippe Suter and Viktor Kuncak. This tool is used to spot various kinds of mistakes in PHP applications.
+
+The tool was originally presented in this [Paper](http://dl.acm.org/citation.cfm?doid=1882291.1882355) at the International Symposium on the Foundations of Software Engineering (FSE), 2010.
+
+Please note that this repository is not the original repository for this tool. This repository is merely for hosting the tool on GitHub and [I](https://github.com/nikhiljosyabhatla) am not the original author of this tool.
+
+Here is the link to the [Original Project Repo](https://github.com/colder/phantm).
+
+In this repository, for Phantm you will find:
+
+ :white_check_mark: Source code for Phantm
+ 
+ :x: Original Buglocalizer plugin 
+ 
+This repository was constructed by Nikhil Josyabhatla of Team New Hanover under the supervision of Dr. Emerson Murphy-Hill.
+
+---
+
 phantm - PHp ANalzer for Type Mismatches
 ======
 
