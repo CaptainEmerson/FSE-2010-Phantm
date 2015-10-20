@@ -4,7 +4,7 @@ This repository contains the information related to the tool Phantm. Phantm is a
 
 The tool was originally presented in this [Paper](http://dl.acm.org/citation.cfm?doid=1882291.1882355) at the International Symposium on the Foundations of Software Engineering (FSE), 2010.
 
-Please note that this repository is not the original repository for this tool. This repository is merely for hosting the tool on GitHub and [I](https://github.com/nikhiljosyabhatla) am not the original author of this tool.
+Please note that this repository *is not* the original repository for this tool. This repository is merely for hosting the tool on GitHub and [I](https://github.com/nikhiljosyabhatla) am not the original author of this tool.
 
 Here is the link to the [Original Project Repo](https://github.com/colder/phantm).
 
