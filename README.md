@@ -12,7 +12,7 @@ Here are some links to the project:
  
  * [Original Project Repo](https://github.com/colder/phantm)
  
- * [Binary for Tool](http://lara.epfl.ch/w/phantm:releases)
+ * [Binary and Download Page for Tool](http://lara.epfl.ch/w/phantm:releases)
  
  * [Video of the tool](https://www.youtube.com/watch?v=j0KGtIREQmU)
 
