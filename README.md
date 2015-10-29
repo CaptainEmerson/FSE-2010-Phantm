@@ -2,11 +2,15 @@
 
 This repository contains the information related to the tool Phantm. Phantm is a tool developed by Etienne Kneuss, Philippe Suter and Viktor Kuncak. This tool is used to spot various kinds of mistakes in PHP applications.
 
-The tool was originally presented in this [Paper](http://dl.acm.org/citation.cfm?doid=1882291.1882355) at the International Symposium on the Foundations of Software Engineering (FSE), 2010.
+The tool was originally presented in this [Paper](http://dl.acm.org/citation.cfm?doid=1882291.1882355) at the International Symposium on the Foundations of Software Engineering (FSE), 2010. The project website 
 
 Please note that this repository *is not* the original repository for this tool. This repository is merely for hosting the tool on GitHub and I am not the original author of this tool.
 
-Here is the link to the [Original Project Repo](https://github.com/colder/phantm).
+Here are some links to the project:
+ [Official Project page](http://lara.epfl.ch/dokuwiki/phantm) 
+ [Original Project Repo](https://github.com/colder/phantm)
+ [Binary for Tool](http://lara.epfl.ch/w/phantm:releases)
+ [Video of the tool](https://www.youtube.com/watch?v=j0KGtIREQmU)
 
 In this repository, for Phantm you will find:
 
