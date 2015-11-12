@@ -12,7 +12,7 @@
         
         c. Launch Ubuntu with GUI.
         
-        d. Install JDK 7 using **apt-get** command.
+        d. Install JDK 7 using 'apt-get' command.
         
 ## References
 [Vagrant shell documentation] (https://docs.vagrantup.com/v2/provisioning/shell.html)
