@@ -13,14 +13,15 @@
 
         c. Launch Ubuntu with GUI.
 
-        d. Install JDK 7 using 'apt-get' command.
+        d. Make the JAR file for the tool Phantm along with all its dependencies and important files.
 
   6.  You can also use the following credentials to log in to the system:
       *  Username: vagrant
       *  Password: vagrant
 
 ## References
-The vagrant documentation for running shell commands: [Vagrant shell documentation] (https://docs.vagrantup.com/v2/provisioning/shell.html)
+  *  [Vagrant shell documentation] (https://docs.vagrantup.com/v2/provisioning/shell.html)
+  *  [Export command from Vagrantfile](http://stackoverflow.com/questions/21753422/set-path-in-vagrant-machine)
 
 ## Acknowledgements
 I would like to thank the uploader of the ubuntu desktop basebox "box-cutter/ubuntu1404-desktop" for making it available on vagrant cloud.
