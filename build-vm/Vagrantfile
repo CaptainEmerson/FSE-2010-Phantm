@@ -37,7 +37,6 @@ EOL
 
 		echo "source /vagrant/export.sh" >> /home/vagrant/.bashrc
 
-		#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
 		export SCALA_HOME=/usr/share/java/scala
 
 		#Move to Desktop
