@@ -20,7 +20,7 @@ In this repository, for Phantm you will find:
 
  :white_check_mark: [Source code for Phantm](https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Phantm/tree/master/src)
  
- :x: Original Phantm JAR file 
+ :white_check_mark: [Original Phantm JAR file](https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Phantm/tree/master/target)
  
  :white_check_mark: [Virtual machine containing tool](https://drive.google.com/a/ncsu.edu/file/d/0B1jLlik13cP4RUItQV9TMWlOOVk/view?usp=sharing)
  
