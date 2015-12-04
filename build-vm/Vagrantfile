@@ -1,16 +1,79 @@
 Vagrant.configure(2) do |config|
-config.vm.box = "box-cutter/ubuntu1404-desktop"
-config.vm.provider "virtualbox" do |vb|
-vb.gui = true
-vb.memory = "2048"
-end
-config.vm.provision "shell", inline: <<-SHELL
+	config.vm.box = "box-cutter/ubuntu1404-desktop"
+	
+	config.vm.provider "virtualbox" do |vb|
+		vb.gui = true
+		vb.memory = "2048"
+		
+		# Provide a name to the VM
+		vb.name = "NewHanover-njosyab-Phantm"
+	end
 
-#Update the Ubuntu system
-sudo apt-get update
+	config.vm.provision "shell", inline: <<-SHELL
 
-#Install Java 1.7
-sudo apt-get -y install openjdk-7-jdk
+		#Update the Ubuntu system
+		sudo apt-get update
 
-SHELL
+		#Install Java JDK 7
+		sudo apt-get install -y openjdk-7-jdk
+
+		#Install ANT
+		sudo apt-get install -y ant
+
+		#Install SBT
+		echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+		sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
+		sudo apt-get update
+		sudo apt-get install -y sbt
+
+		#Install SCALA
+		sudo apt-get install -y scala
+
+		#Set the JAVA_HOME and SCALA_HOME environment variables
+		cat >/vagrant/export.sh <<EOL
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
+export PATH=$JAVA_HOME/bin:$PATH
+EOL
+
+		echo "source /vagrant/export.sh" >> /home/vagrant/.bashrc
+
+		export SCALA_HOME=/usr/share/java/scala
+
+		#Move to Desktop
+		cd ./Desktop/
+
+		#Clone the Phantm tool into a directory
+		git clone  https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Phantm.git phantm
+		cd phantm
+
+		make bootstrap
+		sbt assembly
+
+
+		#Move desktop files to the desktop
+		cp /home/vagrant/Desktop/phantm/build-vm/desktop.tar.gz /home/vagrant/Desktop/desktop.tar.gz
+		tar zxvf /home/vagrant/Desktop/desktop.tar.gz -C /home/vagrant/Desktop/
+		rm /home/vagrant/Desktop/desktop.tar.gz
+
+		# Add Verily as startup application
+		sudo mkdir "/home/vagrant/.config/autostart"
+		sudo cp /home/vagrant/Desktop/Phantm.desktop /home/vagrant/.config/autostart/Phantm.desktop
+
+		# Remove unnecessary launcher applications
+		sudo rm -f "/usr/share/applications/ubuntu-amazon-default.desktop"
+		sudo rm -f "/usr/share/applications/libreoffice-calc.desktop"
+		sudo rm -f "/usr/share/applications/libreoffice-writer.desktop"
+		sudo rm -f "/usr/share/applications/libreoffice-impress.desktop"
+		sudo rm -f "/usr/share/applications/ubuntu-software-center.desktop"
+
+		# Disable screen lockout
+		mv /home/vagrant/Desktop/login_desktop.sh /home/vagrant/login_desktop.sh
+		sudo update-desktop-database
+		sudo cp /home/vagrant/Desktop/login_desktop.sh.desktop /etc/xdg/autostart/login_desktop.sh.desktop
+		rm /home/vagrant/Desktop/login_desktop.sh.desktop
+
+		# Reboot the VM
+		sudo reboot
+
+	SHELL
 end
